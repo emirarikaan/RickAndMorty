@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kle-o3-h1F">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="RickAndMorty" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dFe-CN-Nve"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973.28244274809151" y="-2.1126760563380285"/>
+        </scene>
+        <!--Rick And Morty-->
+        <scene sceneID="7hh-vk-Sh1">
+            <objects>
+                <viewController storyboardIdentifier="CharactersViewController" id="UqY-xf-9ym" customClass="CharactersViewController" customModule="RickAndMorty" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tbk-fx-9K1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VgD-KW-jHq">
+                                <rect key="frame" x="0.0" y="157" width="393" height="661"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="M2z-ul-m2f">
+                                    <size key="itemSize" width="140" height="182"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="qEn-Ju-iNg" customClass="CharactersViewCell" customModule="RickAndMorty" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="180"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ftG-6g-Bym">
+                                            <rect key="frame" x="0.0" y="0.0" width="140" height="180"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bqu-0t-CKA">
+                                                    <rect key="frame" x="0.0" y="0.0" width="140" height="123.33333333333333"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cY-wg-RKu">
+                                                    <rect key="frame" x="20" y="144" width="100" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="bvp-Mn-Q8K"/>
+                                                        <constraint firstAttribute="width" constant="100" id="lHj-Hk-N0G"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Bqu-0t-CKA" secondAttribute="trailing" id="8ps-XN-ZKB"/>
+                                                <constraint firstItem="Bqu-0t-CKA" firstAttribute="leading" secondItem="ftG-6g-Bym" secondAttribute="leading" id="JAN-MF-bZI"/>
+                                                <constraint firstItem="0cY-wg-RKu" firstAttribute="centerX" secondItem="ftG-6g-Bym" secondAttribute="centerX" id="Lcx-sV-izh"/>
+                                                <constraint firstItem="Bqu-0t-CKA" firstAttribute="top" secondItem="ftG-6g-Bym" secondAttribute="top" id="XsA-vB-mXK"/>
+                                                <constraint firstItem="0cY-wg-RKu" firstAttribute="firstBaseline" secondItem="Bqu-0t-CKA" secondAttribute="baseline" constant="33" id="YQB-KF-TFT"/>
+                                                <constraint firstItem="Bqu-0t-CKA" firstAttribute="centerX" secondItem="ftG-6g-Bym" secondAttribute="centerX" id="dNY-ZE-rgS"/>
+                                                <constraint firstAttribute="bottom" secondItem="0cY-wg-RKu" secondAttribute="bottom" constant="19" id="feE-DX-oWP"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="140" height="180"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="Bqu-0t-CKA" id="OM5-QF-9Ix"/>
+                                            <outlet property="label" destination="0cY-wg-RKu" id="Nmw-gg-YX6"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jWf-pC-zw8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VgD-KW-jHq" firstAttribute="top" secondItem="jWf-pC-zw8" secondAttribute="top" constant="54" id="7ef-4p-3HO"/>
+                            <constraint firstItem="VgD-KW-jHq" firstAttribute="bottom" secondItem="jWf-pC-zw8" secondAttribute="bottom" id="bca-2l-xu9"/>
+                            <constraint firstItem="VgD-KW-jHq" firstAttribute="trailing" secondItem="jWf-pC-zw8" secondAttribute="trailing" id="znZ-K6-VKf"/>
+                            <constraint firstItem="VgD-KW-jHq" firstAttribute="leading" secondItem="jWf-pC-zw8" secondAttribute="leading" id="zzv-2O-Nbh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Rick And Morty" id="FMA-1R-osi"/>
+                    <connections>
+                        <outlet property="collectionView" destination="VgD-KW-jHq" id="Yp1-Xu-WVw"/>
+                        <segue destination="mPy-0i-tud" kind="push" id="ohJ-pZ-Ur6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r5j-zB-7fQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2832.8244274809158" y="18.30985915492958"/>
+        </scene>
+        <!--Character Detail View Controller-->
+        <scene sceneID="0hr-RL-Z1V">
+            <objects>
+                <viewController storyboardIdentifier="CharacterDetailViewController" id="mPy-0i-tud" customClass="CharacterDetailViewController" customModule="RickAndMorty" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rh3-la-VEC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Ycg-QT-5qR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3VJ-fK-9Mq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ep4-gv-lBi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3773" y="36"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="538-Q8-UDw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kle-o3-h1F" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UDl-c6-zCG">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1Be-Rw-4b0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eqa-1M-Goi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KU8-iJ-apr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Ui-dm-m68" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2W5-Yj-owy">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UqY-xf-9ym" kind="relationship" relationship="rootViewController" id="nKN-ai-iQV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xDg-dO-wZo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1906.1068702290077" y="18.30985915492958"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
