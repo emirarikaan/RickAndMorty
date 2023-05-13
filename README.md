@@ -6,7 +6,7 @@
     <li><strong>Character List:</strong> Displays a list of all Rick and Morty characters, including their name, image, and status.</li>
     <li><strong>Character Details:</strong> Shows detailed information about a selected character, such as their species, gender, and origin location.</li>
     <li><strong>Episode List:</strong> Lists all Rick and Morty episodes, along with their name and air date.</li>
-    <li><strong>Episode Details:</strong> Presents detailed information about a selected episode, including a list of characters that appeared in the episode and their roles.</li>
+
 </ul>
 
 <h2>Architecture</h2>
